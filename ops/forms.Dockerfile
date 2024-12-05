@@ -2,7 +2,7 @@ from ubuntu:latest
 
 run apt update -y
 #workdir
-
+run apt install vim -y
 workdir /home/ubuntu/scripts
 
 copy ./script .
