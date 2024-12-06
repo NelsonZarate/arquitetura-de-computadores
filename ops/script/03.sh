@@ -20,7 +20,7 @@ if [ -d "$caminho" ]; then
         fi
     done
     if [ "$encontrado" = false ]; then
-        echo "Nenhuma pasta encontrada '$1'."
+        echo "Nenhuma pasta encontrada  '$1'."
     fi
 else
     echo "A pasta $caminho não existe."

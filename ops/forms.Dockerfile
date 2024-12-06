@@ -7,7 +7,7 @@ WORKDIR /home/ubuntu/scripts
 
 # Copiar a pasta 'script' antes de aplicar permissões
 COPY ./script .
-RUN chmod -R u+x .
+RUN chmod u+x ./04.sh
 
 
 #RUN chmod u+x dir_spammer.sh

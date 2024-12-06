@@ -14,3 +14,4 @@ done
 
 # Mensagem de sucesso
 echo "Pastas criadas com sucesso."
+bash
