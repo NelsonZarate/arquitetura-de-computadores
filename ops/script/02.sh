@@ -10,7 +10,7 @@ if ! [ -d ../$1 ]; then
     exit 1
 fi
 
-for path in ../$1/*; do
+for path in ./1/*; do
     nome=${path: -2}
     length_path=$((${#path}-3))
     novo_path=${path::length_path}

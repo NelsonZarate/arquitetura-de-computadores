@@ -1,18 +1,17 @@
-from ubuntu:latest
+FROM ubuntu:latest
 
-run apt update -y
-#workdir
-run apt install vim -y
-workdir /home/ubuntu/scripts
+RUN apt update -y
+RUN apt install vim -y
 
-copy ./script .
-run chmod u+x dir_spammer.sh
-run ./dir_spammer.sh
-run chmod u+x 03.sh
-#cmd ["tldr","docker"]
-#entrypoint ["tldr"]
+WORKDIR /home/ubuntu/scripts
 
-cmd ["bash"]
-#entrypoint["bash"]
+# Copiar a pasta 'script' antes de aplicar permissões
+COPY ./script .
+RUN chmod -R u+x .
 
+
+#RUN chmod u+x dir_spammer.sh
+RUN ./dir_spammer.sh
+
+CMD ["bash"]
 
